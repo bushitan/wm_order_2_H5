@@ -85,7 +85,7 @@
         "router" : {
             "base" : "/wm_order_uni"
         },
-        "title" : "商城",
+        "title" : "小杯子点单系统",
         "devServer" : {
             "https" : false
         }

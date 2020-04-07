@@ -48,12 +48,20 @@
 				// uni.setStorageSync(this.db.KEY_SHOP_ID ,ShopId )
 				// uni.setStorageSync(this.db.KEY_SHOP_TAKE_TYPE ,ShopTakeType )
 								
-				this.onInit()
+				// this.onInit()
+				
+				var that = this
+				setTimeout(function(){ 
+					that.clickTo()
+				},1500)
+				// this.clickTo()
 			},
 			methods:{
 				clickTo(){
-					uni.redirectTo({
-						url: '/pages/index/index'
+					uni.setStorageSync(this.db.KEY_SHOP_ID , 1) 
+					// debugger
+					uni.switchTab({
+						url: '/pages/menu/menu'
 					});
 				},
 				async onInit(){

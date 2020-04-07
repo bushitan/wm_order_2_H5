@@ -14,8 +14,8 @@ Vue.component('cu-custom',cuCustom)
 // 选择框
 import tabbar from '@/components/tabbar/tabbar.vue'
 Vue.component('tabbar', tabbar)
-import Footer from '@/components/footer.vue'
-Vue.component('footer', Footer)
+// import Footer from '@/components/footer.vue'
+// Vue.component('footer', Footer)
 
 Vue.prototype.Shop = {
 	Id:0,

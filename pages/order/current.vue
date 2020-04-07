@@ -10,9 +10,10 @@
 						<image src="/static/images/strong/logo.jpg"  class="icon_image round" mode="widthFix"></image>					
 					</view>
 					<view class=" margin-top-xl text-black text-bold text-lg">
-						你好，<open-data  type="userNickName"></open-data>
+						<!-- 你好，<open-data  type="userNickName"></open-data> -->
+						您今日还未下单
 					</view>
-					<view class="text margin-top-xs">现在您还没有下单</view>
+					<!-- <view class="text margin-top-xs">您今日还未下单</view> -->
 					<!-- <view class="text-gray text">快选择一杯喜欢的茶吧</view> -->
 					<view class="margin-top" @click="toMenu()">
 						<button class="cu-btn bg-yellow lg round  text-white padding-lr" style="width: 150px;">去点单</button>					

@@ -33,7 +33,7 @@
 				<view class="pg-space-xxl"></view>
 				<view class="pg-space-xxl"></view>				
 			</scroll-view>
-			<scroll-view class="VerticalMain" scroll-y scroll-with-animation style="height:calc(100vh - 375upx - 0px)"
+			<scroll-view class="VerticalMain" scroll-y scroll-with-animation :style="'height:calc(100vh - 375upx - ' + SpaceBottom +'px )'"
 			 :scroll-into-view="'main-'+mainCur" @scroll="VerticalMain">
 				<view class="padding-top padding-lr" v-for="(category,index) in list" :key="index" :id="'main-'+index">
 					<view class="cu-bar  bg-white">
@@ -128,7 +128,7 @@
 				</view>
 			</view>
 		</view>
-		<view class="bg-white cu-list menu" :style="'position: fixed; bottom:'+ SpaceBottom +'px; left: 0; right: 0;'" v-else>			
+		<view class="bg-white cu-list menu" :style="'position: fixed; bottom:'+ SpaceBottom +'px; left: 0; right: 0;'" v-else   v-show="shopDiscount==''?false:true">			
 			<view class="cu-item ">
 				<view class="action">					
 					<text class="line-red text-sm">{{shopDiscount}}</text>				
@@ -136,7 +136,7 @@
 				<view class="action  text-sm basis-df text-right" @click="selectShop">
 					<!-- <text class="line-black ">{{shopName}}</text>
 					<text class="line-gray" >(选择门店)</text> -->
-					<button class="cu-btn sm line-yellow">{{shopName}}(选择)</button>
+					<!-- <button class="cu-btn sm line-yellow">{{shopName}}(选择)</button> -->
 					<!-- <view class="pg-arrow"></view> -->
 				</view>
 			</view>
@@ -285,7 +285,7 @@
 		data() {
 			return {
 				CustomBar:this.CustomBar,
-				SpaceBottom:0,
+				SpaceBottom:50,
 							
 				cardCur: 0,
 				swiperList:[
@@ -336,6 +336,8 @@
 			};
 		},
 		async onLoad(options) {
+			// debugger
+			console.log(options)
 			uni.showLoading({
 				title: '加载中...',
 				mask: true
